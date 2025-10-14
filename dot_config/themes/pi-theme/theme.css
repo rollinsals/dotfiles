@@ -1,0 +1,12 @@
+/* theme specific color values */
+@define-color transparent_background_color rgba(35, 33, 54, 0.75);
+@define-color background_color #232136;
+@define-color bright_text_color #e0def4;
+@define-color dim_text_color #6e6a86;
+@define-color text_color #908caa;
+@define-color accent_color #9ccfd8;
+@define-color alternative_color #c4a7e7;
+@define-color alt_warning_color #ea9a97;
+@define-color warning_color #f6c177;
+@define-color error_color #eb6f92;
+

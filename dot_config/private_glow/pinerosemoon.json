@@ -1,0 +1,14 @@
+{
+  "document": {
+    "block_prefix": "\n",
+    "block_suffix": "\n",
+    "color": "",
+    "margin": 2
+  },
+  "paragraph": {},
+  "heading": {},
+  "block_quote": {},
+  "list": {},
+  "code_block": {},
+  "table": {}
+}

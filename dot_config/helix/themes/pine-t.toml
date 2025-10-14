@@ -1,0 +1,6 @@
+inherits = "rose_pine_moon"
+
+"ui.background" = { } 
+
+"ui.statusline" = {fg = "#3e8fb0", bg = "#393552"}
+"ui.bufferline" = "#c4a7e7"

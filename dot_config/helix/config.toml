@@ -1,0 +1,65 @@
+theme = "pine-t"
+
+
+[editor]
+gutters = ["diagnostics", "spacer","line-numbers", "diff"]
+preview-completion-insert = false
+color-modes = true
+bufferline = "multiple"
+
+[editor.lsp]
+auto-signature-help = false
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
+
+
+
+[keys.normal]
+C-s = ":w" #ctrl-s acts as save
+n="move_char_left"
+e="move_visual_line_down"
+i="move_visual_line_up"
+o="move_char_right"
+
+l="insert_mode"
+L="insert_at_line_start"
+
+h="open_below"
+H="open_above"
+
+j="search_next"
+J="search_prev"
+
+[keys.normal.g]
+n="goto_line_start"
+o="goto_line_end"
+
+[keys.normal.space.w]
+n="jump_view_left"
+e="jump_view_down"
+i="jump_view_up"
+o="jump_view_right"
+
+[keys.normal.C-w]
+n="jump_view_left"
+e="jump_view_down"
+i="jump_view_up"
+o="jump_view_right"
+
+[keys.select]
+n="move_char_left"
+e="move_line_down"
+i="move_line_up"
+o="move_char_right"
+
+l="insert_mode"
+L="insert_at_line_start"
+
+h="open_below"
+H="open_above"
+
+j="search_next"
+J="search_prev"
+

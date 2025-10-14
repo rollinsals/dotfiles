@@ -1,0 +1,28 @@
+use_nerdfont = false
+hide_display_names = true
+
+[keybindings]
+"Shift+q" = "quit"
+"q" = "focus queue"
+"a" = "focus search"
+"m" = "focus library"
+"t" = "save [current]"
+
+
+[theme]
+background = "#232136bf"
+primary = "#E0DEF4"
+secondary = "#908CAA"
+title = "#EB6F92"
+playing = "#F6C177"
+playing_selected = "#EB6F92"
+playing_bg = "#2A273Fcc"
+highlight = "#9CCFD8"
+highlight_bg = "#44415A"
+error = "#EA9A97"
+error_bg = "#908CAA"
+statusbar = "#9CCFD8"
+statusbar_progress = "#F6C177"
+statusbar_bg = "#393552"
+cmdline = "#3E8FB0"
+cmdline_bg = "#2A283E"
