@@ -1,0 +1,232 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* import css definitions for current theme */
+/*@import url("theme.css"); */
+
+@define-color transparent_background_color rgba(35, 33, 54, 0.85);
+@define-color background_color #232136;
+@define-color bright_text_color #e0def4;
+@define-color dim_text_color #6e6a86;
+@define-color text_color #908caa;
+@define-color accent_color #9ccfd8;
+@define-color alternative_color #c4a7e7;
+@define-color alt_warning_color #ea9a97;
+@define-color warning_color #f6c177;
+@define-color error_color #eb6f92;
+
+
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+@keyframes blink-warning {
+    70% {
+        color: @text_color;
+    }
+
+    to {
+        color: @text_color;
+        background-color: @warning_color;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: @text_color;
+    }
+
+    to {
+        color: @text_color;
+        background-color: @error_color;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    font-family:  IBM Plex Mono, sans-serif;
+    font-size: 14px;
+}
+
+/* The whole bar */
+#waybar {
+    background: @background_color;
+    color: @text_color;
+}
+
+/* Each module */
+#custom-pacman,
+#custom-menu,
+#custom-help,
+#custom-scratchpad,
+#bluetooth,
+#battery,
+#clock,
+#cpu,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#idle_inhibitor,
+#backlight,
+#tray {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#custom-scratchpad {
+    background-color: @accent_color;
+}
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: @warning_color;
+}
+
+#battery.critical {
+    color: @error_color;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#clock {
+    color: @dim-text-color;
+    /*font-weight: bold;*/
+    background-color: @accent_color;
+}
+
+#cpu {
+  /* No styles */
+}
+
+#cpu.warning {
+    color: @warning_color;
+}
+
+#cpu.critical {
+    color: @error_color;
+}
+
+#custom-menu {
+    background-color: @accent_color;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: @warning_color;
+}
+
+#memory.critical {
+    color: @error_color;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#mode {
+    background: @background_color;
+}
+
+#network {
+    /* No styles */
+}
+
+#network.disconnected {
+    color: @warning_color;
+}
+
+#pulseaudio {
+    /* No styles */
+}
+
+#pulseaudio.muted {
+    /* No styles */
+    color: @warning_color;
+}
+
+#temperature {
+    /* No styles */
+}
+
+#temperature.critical {
+    color: @error_color;
+}
+
+#tray {
+    /* No styles */
+}
+
+#window {
+    margin-right: 25px;
+    color: @accent_color;
+}
+
+#workspaces button {
+    border-top: 2px solid transparent;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: @accent_color;
+}
+
+#workspaces button.focused {
+    border-color: @accent_color;
+    color: @dim_text_color;
+    background-color: @accent_color;
+}
+
+#workspaces button.urgent {
+    color: @warning_color;
+}
+
+#custom-pacman {
+    color: @warning_color;
+}
+
+#bluetooth.disabled {
+    color: @warning_color;
+}
+
+#custom-help {
+    color: @alternative-color;
+}
